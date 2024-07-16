@@ -19,7 +19,6 @@ body{
     max-width: 1920px;
     margin: 0 auto;
     font-family: "Work Sans", sans-serif;
-    border: 2px solid red;
 }
 main{
     max-width: 1440px;
@@ -274,7 +273,7 @@ header{
     margin-top: 20px;
 }
 /* medium device media query */
-@media screen and (max-width:990px) and (min-width:578px) {
+@media screen and (max-width:1066px) and (min-width:578px) {
     .nav-container,
     .quick-list-section,
     .feature-section{
@@ -303,9 +302,14 @@ header{
         position: static;
         margin: 50px auto;
     }
+    .facts-info-container{
+        width: 100%;
+        text-align: center;
+    }
     .facts-card-container,
     .sponsor-container{
         grid-template-columns: repeat(2,1fr);
+        justify-items: center;
     }
 }
 footer{
@@ -330,7 +334,10 @@ footer{
         flex-direction: column;
     }
     .nav-list{
-        margin: 10px;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
         gap: 10px;
     }
     .brand-container{
@@ -350,16 +357,22 @@ footer{
         display: none;
     }
     .ten-years-container{
-        display: none;
+    display: none;
     }
     .facts-info-container{
         width: 100%;
         text-align: center;
     }
-    
+    .facts-card-container{
+        justify-items: center;
+    }
 }
 @media screen and (max-width:700px) and (min-width:576px){
     .quick-list-img-container{
         grid-template-columns: repeat(1,1fr);
+    }
+    .facts-info-container{
+        width: 100%;
+        text-align: center;
     }
 }
